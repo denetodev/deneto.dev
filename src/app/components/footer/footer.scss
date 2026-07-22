@@ -1,0 +1,219 @@
+.footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding-top: 4rem;
+
+  // === COLUNAS PRINCIPAIS ===
+  &__main {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border-dark);
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Logo + descrição
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  &__logo-badge {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: 800;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo-text {
+    font-size: 1.1rem;
+    font-weight: 800;
+  }
+
+  &__desc {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: var(--color-muted);
+    max-width: 320px;
+    margin-bottom: 1.5rem;
+  }
+
+  // Ícones sociais
+  &__socials {
+    display: flex;
+    gap: 0.6rem;
+
+    a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-muted);
+      transition: all var(--ease);
+
+      &:hover {
+        border-color: var(--color-orange);
+        color: var(--color-orange);
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  // Heading das colunas
+  &__heading {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+  }
+
+  // Links de navegação
+  &__nav-link {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 0.75rem;
+
+    &:hover {
+      color: var(--color-white);
+    }
+  }
+
+  // Info de contato
+  &__info {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-bottom: 0.75rem;
+
+    &--link:hover {
+      color: var(--color-white);
+    }
+  }
+
+  // Newsletter
+  &__newsletter {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 50px;
+    overflow: hidden;
+    transition: border-color var(--ease);
+
+    &:focus-within {
+      border-color: var(--color-orange);
+    }
+  }
+
+  &__input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.75rem 1.25rem;
+    font-family: var(--font);
+    font-size: 0.85rem;
+    color: var(--color-white);
+
+    &::placeholder {
+      color: var(--color-muted);
+    }
+  }
+
+  &__send {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    transition: background-color var(--ease);
+
+    &:hover {
+      background-color: #e55800;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  // === BARRA INFERIOR ===
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    font-size: 0.72rem;
+    color: var(--color-muted);
+  }
+
+  &__bottom-center {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__mini-badge {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    font-size: 0.55rem;
+    font-weight: 800;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__bottom-right {
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+      color: var(--color-muted);
+
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  // === MOBILE ===
+  @media (max-width: 768px) {
+    &__main {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    &__bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+}
