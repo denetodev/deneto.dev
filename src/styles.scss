@@ -13,6 +13,9 @@
   --color-border-dark: #1f1f1f;
   --color-border-light: #ddd8cf;
 
+  // Paleta Cores dos Textos
+  --color-text-dark: #1a1a1a;
+
   // Tipografia
   --font: 'Sora', sans-serif;
 
@@ -57,7 +60,8 @@ a {
   transition: color var(--ease);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 

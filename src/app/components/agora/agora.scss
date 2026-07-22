@@ -1,0 +1,97 @@
+.agora {
+  background-color: var(--color-offwhite);
+  color: var(--color-text-dark);
+  padding: 6rem 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 4rem;
+  }
+
+  // Coluna esquerda fixa
+  &__header {
+    .section-label {
+      color: var(--color-text-dark);
+    }
+  }
+
+  &__updated {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    margin-top: -1.5rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color-orange);
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  // Coluna direita
+  &__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: var(--color-text-dark);
+    margin-bottom: 3rem;
+    max-width: 620px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.75rem 0;
+    border-top: 1px solid var(--color-border-light);
+
+    &:last-child {
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #444;
+
+      strong {
+        color: var(--color-text-dark);
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__arrow {
+    color: var(--color-orange);
+    font-size: 1rem;
+    flex-shrink: 0;
+    padding-top: 0.15rem;
+  }
+
+  // === MOBILE ===
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+
+    &__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
+}
