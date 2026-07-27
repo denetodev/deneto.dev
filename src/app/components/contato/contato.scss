@@ -21,10 +21,15 @@
         background-color: var(--color-orange);
         color: var(--color-white);
         border-radius: 4px;
-        transition: background-color var(--ease);
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 
         &:hover {
-            background-color: #e55800;
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 98, 0, 0.3);
+        }
+
+        &:active {
+            transform: scale(1);
         }
     }
 

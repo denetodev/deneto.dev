@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { Reveal } from '../../directives/reveal';
 
 @Component({
   selector: 'app-contato',
-  imports: [],
+  standalone: true,
+  imports: [Reveal],
   templateUrl: './contato.html',
   styleUrl: './contato.scss',
 })
-export class Contato {
-
-}
+export class Contato { }

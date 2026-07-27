@@ -1,28 +1,28 @@
 <section class="conteudo" id="conteudo">
     <div class="conteudo__inner container">
-        <div class="section-label">
+        <div class="section-label" appReveal>
             <span class="label-number">06</span>
             <span>CONTEÚDO</span>
         </div>
 
-        <h2 class="conteudo__title">Eu documento os projetos em vídeo.</h2>
+        <h2 class="conteudo__title" appReveal [revealDelay]="100">Eu documento os projetos em vídeo.</h2>
 
-        <p class="conteudo__desc">
+        <p class="conteudo__desc" appReveal [revealDelay]="200">
             Não é curso, não vira curso, e não tem mentoria no final. É registro de trabalho: o que eu construí, o que
             quebrou, quanto custou e o que eu faria diferente.
         </p>
 
-        <div class="conteudo__preview">
+        <div class="conteudo__preview" appReveal [revealDelay]="300">
             <div class="conteudo__card">
                 <p>primeiros vídeos chegando</p>
             </div>
         </div>
 
-        <div class="conteudo__actions">
+        <div class="conteudo__actions" appReveal [revealDelay]="400">
             <a href="https://youtube.com/@denetodev" target="_blank" rel="noopener"
-                class="conteudo__btn conteudo__btn--yt">YouTube</a>
+                class="conteudo__btn conteudo__btn--yt btn-hover">YouTube</a>
             <a href="https://instagram.com/denetodev" target="_blank" rel="noopener"
-                class="conteudo__btn conteudo__btn--ig">Instagram</a>
+                class="conteudo__btn conteudo__btn--ig btn-hover">Instagram</a>
         </div>
     </div>
 </section>

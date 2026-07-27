@@ -1,14 +1,13 @@
 <section class="fora" id="fora-do-codigo">
     <div class="fora__inner container">
-        <div class="section-label">
+        <div class="section-label" appReveal>
             <span class="label-number">05</span>
             <span>FORA DO CÓDIGO</span>
         </div>
 
-        <h2 class="fora__title">Nem tudo aqui é automação.</h2>
+        <h2 class="fora__title" appReveal [revealDelay]="100">Nem tudo aqui é automação.</h2>
 
-        <!-- Leitura -->
-        <div class="fora__block">
+        <div class="fora__block" appReveal [revealDelay]="200">
             <h3 class="fora__subtitle">O que eu leio</h3>
             <p class="fora__text">
                 Suspense, ficção científica, romance e uma coisa ou outra de desenvolvimento pessoal. Leio pra descobrir
@@ -24,12 +23,11 @@
 
             <p class="fora__text fora__text--small">
                 19 livros na estante de 2026. A lista completa (lidos, em andamento e na fila) está na
-                <a routerLink="/estante" class="fora__link">página da estante</a>.
+                <a routerLink="/estante" class="fora__link animated-link">página da estante</a>.
             </p>
         </div>
 
-        <!-- Brasília -->
-        <div class="fora__block">
+        <div class="fora__block" appReveal [revealDelay]="300">
             <h3 class="fora__subtitle">Brasília</h3>
             <p class="fora__text">
                 Gosto dos bares, dos centros culturais, dos shows espalhados pela cidade e dos parques abertos. É mais
@@ -37,8 +35,7 @@
             </p>
         </div>
 
-        <!-- Referências -->
-        <div class="fora__block">
+        <div class="fora__block" appReveal [revealDelay]="400">
             <h3 class="fora__subtitle">Quem eu acompanho</h3>
             <p class="fora__text">Gente que faz conteúdo do jeito que eu respeito:</p>
             <ul class="fora__refs">

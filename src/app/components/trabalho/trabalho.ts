@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { WhatsappMockup } from '../whatsapp-mockup/whatsapp-mockup';
+import { Reveal } from '../../directives/reveal';
 
 @Component({
   selector: 'app-trabalho',
-  imports: [ WhatsappMockup ],
+  imports: [ WhatsappMockup, Reveal ],
   templateUrl: './trabalho.html',
   styleUrl: './trabalho.scss',
 })

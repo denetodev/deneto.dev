@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { Reveal } from '../../directives/reveal';
 
 @Component({
   selector: 'app-agora',
-  imports: [],
+  standalone: true,
+  imports: [Reveal],
   templateUrl: './agora.html',
   styleUrl: './agora.scss',
 })
-export class Agora {
-
-}
+export class Agora { }
