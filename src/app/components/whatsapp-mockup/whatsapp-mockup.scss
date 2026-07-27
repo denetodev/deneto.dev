@@ -1,0 +1,99 @@
+.wpp {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: var(--font);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+    // Header
+    &__header {
+        background-color: #1f2c34;
+        padding: 0.75rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    &__avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #2a3942;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #8696a0;
+        flex-shrink: 0;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #e9edef;
+    }
+
+    &__label {
+        font-size: 0.65rem;
+        font-weight: 500;
+        color: #8696a0;
+    }
+
+    // Chat area
+    &__chat {
+        background-color: #0b141a;
+        background-image:
+            radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.015) 0%, transparent 50%);
+        padding: 1rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        min-height: 280px;
+    }
+
+    // Bolhas
+    &__bubble {
+        max-width: 82%;
+        padding: 0.5rem 0.65rem;
+        border-radius: 8px;
+        position: relative;
+
+        p {
+            font-size: 0.78rem;
+            line-height: 1.5;
+            margin-bottom: 0.15rem;
+        }
+
+        &--agent {
+            background-color: #1f2c34;
+            color: #e9edef;
+            align-self: flex-start;
+            border-top-left-radius: 2px;
+        }
+
+        &--client {
+            background-color: #005c4b;
+            color: #e9edef;
+            align-self: flex-end;
+            border-top-right-radius: 2px;
+        }
+    }
+
+    &__time {
+        display: block;
+        text-align: right;
+        font-size: 0.6rem;
+        color: rgba(255, 255, 255, 0.45);
+    }
+}

@@ -70,11 +70,21 @@
       &:hover {
         border-color: var(--color-orange);
         color: var(--color-orange);
+
+        img {
+          filter: brightness(0) saturate(100%) invert(39%) sepia(91%) saturate(2218%) hue-rotate(11deg) brightness(101%) contrast(105%);
+        }
       }
 
-      svg {
+      svg,
+      img {
         width: 16px;
         height: 16px;
+      }
+
+      img {
+        filter: brightness(0) saturate(100%) invert(60%) sepia(5%) saturate(10%) hue-rotate(0deg) brightness(90%) contrast(90%);
+        transition: filter var(--ease);
       }
     }
   }

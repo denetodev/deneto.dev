@@ -43,7 +43,7 @@
   &--reversed {
     direction: rtl;
 
-    > * {
+    >* {
       direction: ltr;
     }
   }
@@ -84,32 +84,11 @@
     letter-spacing: -0.01em;
   }
 
-  // Imagem
-  &__image {
-    position: relative;
+  // Mockup
+  &__mockup {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  &__image-shape {
-    position: absolute;
-    width: 80%;
-    height: 85%;
-    background-color: var(--color-orange);
-    border-radius: 10px;
-    bottom: -6%;
-    right: 4%;
-    z-index: 0;
-  }
-
-  &__image img {
-    position: relative;
-    z-index: 1;
-    width: 85%;
-    max-width: 400px;
-    border-radius: 8px;
-    object-fit: cover;
   }
 
   // === MOBILE ===
@@ -121,9 +100,9 @@
       direction: ltr;
     }
 
-    &__image {
+    &__mockup {
       order: -1;
-      max-width: 300px;
+      max-width: 340px;
       margin: 0 auto;
     }
 

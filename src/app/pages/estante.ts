@@ -20,19 +20,28 @@ export class Estante {
     { titulo: 'Grupo de Apoio a Serial Killers', autor: 'Saratoga Schaefer' },
     { titulo: 'A Máquina do Tempo', autor: 'H.G. Wells' },
     { titulo: 'Noites Brancas', autor: 'Dostoiévski' },
+    { titulo: 'Crime e Castigo', autor: 'Dostoiévski' },
+    { titulo: 'Matadouro Cinco', autor: 'Vonnegut' },
   ];
 
   emAndamento = [
-    { titulo: 'Crime e Castigo', autor: 'Dostoiévski', progresso: 'faltam ~60 páginas' },
-    { titulo: 'Matadouro Cinco', autor: 'Vonnegut', progresso: '65%' },
+    { titulo: 'Eu, Robô', autor: 'Asimov', progresso: '~75%' },
   ];
 
   naFila = [
+    { titulo: 'A Morte de Ivan Ilyich', autor: 'Tolstói' },
+    { titulo: 'Sobre a Brevidade da Vida', autor: 'Sêneca' },
     { titulo: 'O Cemitério de Praga', autor: 'Umberto Eco' },
     { titulo: 'Cem Anos de Solidão', autor: 'García Márquez' },
     { titulo: 'Foco', autor: 'Daniel Goleman' },
     { titulo: 'Não Contem com o Fim do Livro', autor: 'Eco e Carrière' },
-    { titulo: '1984', autor: 'George Orwell (edição Darkside)' },
     { titulo: 'Édipo Rei + Antígona', autor: 'Sófocles' },
+    { titulo: 'Se os Gatos Desaparecessem do Mundo', autor: 'Kawamura' },
   ];
+
+  get total() { return this.lidos.length + this.emAndamento.length + this.naFila.length; }
+  get totalLidos() { return this.lidos.length; }
+  get totalAndamento() { return this.emAndamento.length; }
+  get totalFila() { return this.naFila.length }
+
 }

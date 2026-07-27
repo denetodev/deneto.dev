@@ -8,7 +8,25 @@
       <span>ESTANTE</span>
     </div>
     <h1 class="estante__title">Estante 2026</h1>
-    <p class="estante__count">16 livros</p>
+
+    <div class="estante__stats">
+      <div class="estante__stat">
+        <span class="estante__stat-number">{{ total }}</span>
+        <span class="estante__stat-label">livros</span>
+      </div>
+      <div class="estante__stat">
+        <span class="estante__stat-number estante__stat-number--lidos">{{ totalLidos }}</span>
+        <span class="estante__stat-label">lidos</span>
+      </div>
+      <div class="estante__stat">
+        <span class="estante__stat-number estante__stat-number--andamento">{{ totalAndamento }}</span>
+        <span class="estante__stat-label">em andamento</span>
+      </div>
+      <div class="estante__stat">
+        <span class="estante__stat-number">{{ totalFila }}</span>
+        <span class="estante__stat-label">na fila</span>
+      </div>
+    </div>
   </header>
 
   <main class="estante__grid container">
