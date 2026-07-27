@@ -1,31 +1,25 @@
-<nav class="nav">
+<nav class="nav" [class.nav--scrolled]="scrolled">
   <div class="nav__inner container">
     <a routerLink="/" class="nav__logo">
       <span class="nav__dot">■</span>deneto
     </a>
 
-    <button
-      class="nav__toggle"
-      (click)="menuOpen = !menuOpen"
-      [attr.aria-expanded]="menuOpen"
-      aria-label="Menu"
-    >
+    <button class="nav__toggle" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen" aria-label="Menu">
       <span class="nav__bar" [class.nav__bar--open]="menuOpen"></span>
       <span class="nav__bar" [class.nav__bar--open]="menuOpen"></span>
     </button>
 
     <div class="nav__links" [class.nav__links--open]="menuOpen">
-      <a href="#agora" class="nav__link" (click)="close()">Agora</a>
-      <a href="#trabalho" class="nav__link" (click)="close()">Trabalho</a>
-      <a href="#sobre" class="nav__link" (click)="close()">Sobre</a>
-      <a href="#conteudo" class="nav__link" (click)="close()">Conteúdo</a>
-      
-      <a  href="https://wa.me/5561986170964"
-        target="_blank"
-        rel="noopener"
-        class="nav__link nav__link--cta"
-        (click)="close()"
-      >Falar com o Neto</a>
+      <a routerLink="/" fragment="agora" class="nav__link" (click)="close()">Agora</a>
+      <a routerLink="/" fragment="trabalho" class="nav__link" (click)="close()">Trabalho</a>
+      <a routerLink="/" fragment="sobre" class="nav__link" (click)="close()">Sobre</a>
+      <a routerLink="/" fragment="conteudo" class="nav__link" (click)="close()">Conteúdo</a>
+      <a href="https://wa.me/5561986170964" target="_blank" rel="noopener" class="nav__link nav__link--cta"
+        (click)="close()">Falar com o Neto</a>
     </div>
+  </div>
+
+  <div class="nav__progress">
+    <div class="nav__progress-bar" [style.width.%]="scrollProgress"></div>
   </div>
 </nav>

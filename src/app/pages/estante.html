@@ -1,0 +1,57 @@
+<div class="estante">
+  <app-navbar />
+
+  <header class="estante__header container">
+    <a routerLink="/" class="estante__back">&#8592; Voltar</a>
+    <div class="section-label">
+      <span class="label-number">05</span>
+      <span>ESTANTE</span>
+    </div>
+    <h1 class="estante__title">Estante 2026</h1>
+    <p class="estante__count">16 livros</p>
+  </header>
+
+  <main class="estante__grid container">
+    <!-- LIDOS -->
+    <div class="estante__col">
+      <h2 class="estante__col-title estante__col-title--lidos">Lidos</h2>
+
+      <div class="estante__book" *ngFor="let livro of lidos; let i = index">
+        <span class="estante__index">{{ (i + 1).toString().padStart(2, '0') }}</span>
+        <div>
+          <strong class="estante__book-title">{{ livro.titulo }}</strong>
+          <span class="estante__book-author"> · {{ livro.autor }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EM ANDAMENTO -->
+    <div class="estante__col">
+      <h2 class="estante__col-title estante__col-title--andamento">Em andamento</h2>
+
+      <div class="estante__book" *ngFor="let livro of emAndamento">
+        <div class="estante__status"></div>
+        <div>
+          <strong class="estante__book-title">{{ livro.titulo }}</strong>
+          <span class="estante__book-author"> · {{ livro.autor }}</span>
+          <span class="estante__book-progress">{{ livro.progresso }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NA FILA -->
+    <div class="estante__col">
+      <h2 class="estante__col-title">Na fila</h2>
+
+      <div class="estante__book" *ngFor="let livro of naFila; let i = index">
+        <span class="estante__index">{{ (i + 1).toString().padStart(2, '0') }}</span>
+        <div>
+          <strong class="estante__book-title">{{ livro.titulo }}</strong>
+          <span class="estante__book-author"> · {{ livro.autor }}</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <app-footer />
+</div>
