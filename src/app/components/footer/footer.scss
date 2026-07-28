@@ -103,7 +103,8 @@
     margin-bottom: 0.75rem;
 
     &:hover {
-      color: var(--color-white);
+      color: var(--color-orange);
+      font-weight: 500;
     }
   }
 
@@ -114,7 +115,8 @@
     margin-bottom: 0.75rem;
 
     &--link:hover {
-      color: var(--color-white);
+      color: var(--color-orange);
+      font-weight: 500;
     }
   }
 

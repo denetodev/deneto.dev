@@ -1,32 +1,32 @@
-<section class="hero noise-bg">
-    <div class="hero__inner container">
-        <div class="hero__content">
-            <p class="hero__location">DENETO · BRASÍLIA, DF</p>
+<section class="hero">
+  <div class="hero__bg">
+    <img src="assets/images/heroimg2.png" alt="" />
+    <div class="hero__overlay"></div>
+  </div>
 
-            <h1 class="hero__title">
-                <span *ngFor="let letter of titleLetters" class="hero-letter"
-                    [style.animation-delay.ms]="letter.delay">{{ letter.char }}</span>
-            </h1>
+  <div class="hero__inner container">
+    <div class="hero__content">
+      <p class="hero__pre">Sou o Neto. Brasília, DF.</p>
 
-            <p class="hero__sub">
-                De dia, trabalho no time de automação de marketing de um dos maiores bancos do país.
-                À noite, construo agentes de IA que atendem o WhatsApp de negócios que rodam com uma pessoa só.
-            </p>
+      <h1 class="hero__headline">
+        <span *ngFor="let letter of headlineLetters" class="hero-letter" [style.animation-delay.ms]="letter.delay">{{
+          letter.char }}</span>
+      </h1>
 
-            <p class="hero__sub hero__sub--accent">
-                Documento tudo em vídeo. Inclusive o que quebrou.
-            </p>
+      <p class="hero__sub">
+        De dia, trabalho no time de automação de marketing de um dos maiores bancos do país.
+        À noite, construo agentes de IA que atendem o WhatsApp de negócios que rodam com uma pessoa só.
+      </p>
 
-            <div class="hero__actions">
-                <a href="#agora" class="hero__btn hero__btn--primary btn-hover">Ver o que estou fazendo</a>
-                <a href="https://wa.me/5561986170964" target="_blank" rel="noopener"
-                    class="hero__btn hero__btn--ghost btn-hover">Falar com o Neto</a>
-            </div>
-        </div>
+      <p class="hero__accent">
+        Documento tudo em vídeo. Inclusive o que quebrou.
+      </p>
 
-        <div class="hero__image">
-            <div class="hero__image-shape" [style.transform]="'translateY(' + parallaxOffset + 'px)'"></div>
-            <img src="assets/images/neto.webp" alt="Neto" />
-        </div>
+      <div class="hero__actions">
+        <a href="#agora" class="hero__btn hero__btn--primary btn-hover">Ver o que estou fazendo</a>
+        <a href="https://wa.me/5561986170964" target="_blank" rel="noopener"
+          class="hero__btn hero__btn--ghost btn-hover">Falar com o Neto</a>
+      </div>
     </div>
+  </div>
 </section>

@@ -1,7 +1,7 @@
 .fora {
     background-color: var(--color-offwhite);
     color: var(--color-text-dark);
-    padding: 6rem 0;
+    padding: 6rem 0 3rem 0;
     border-top: 1px solid var(--color-border-light);
 
     &__title {
@@ -76,12 +76,13 @@
     // Link
     &__link {
         color: var(--color-orange);
-        font-weight: 500;
-        border-bottom: 1px solid transparent;
-        transition: border-color var(--ease);
+        font-weight: 600;
+        border-bottom: 1.5px solid var(--color-orange);
+        padding-bottom: 1px;
+        transition: opacity var(--ease);
 
         &:hover {
-            border-color: var(--color-orange);
+            opacity: 0.75;
         }
     }
 

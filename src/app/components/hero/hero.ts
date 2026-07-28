@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 @Component({
@@ -9,19 +9,13 @@ import { NgFor } from '@angular/common';
   styleUrl: './hero.scss',
 })
 export class Hero implements OnInit {
-  titleLetters: { char: string; delay: number }[] = [];
-  parallaxOffset = 0;
+  headlineLetters: { char: string; delay: number }[] = [];
 
   ngOnInit() {
-    const title = 'Sou o Neto.';
-    this.titleLetters = title.split('').map((char, i) => ({
+    const headline = 'Banco de dia. Agentes de IA à noite.';
+    this.headlineLetters = headline.split('').map((char, i) => ({
       char: char === ' ' ? '\u00A0' : char,
-      delay: 400 + i * 80,
+      delay: 400 + i * 55,
     }));
-  }
-
-  @HostListener('window:scroll')
-  onScroll() {
-    this.parallaxOffset = window.scrollY * 0.3;
   }
 }
