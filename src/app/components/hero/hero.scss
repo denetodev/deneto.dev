@@ -15,7 +15,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center top;
+            object-position: right bottom;
         }
     }
 
@@ -38,14 +38,15 @@
     &__inner {
         position: relative;
         z-index: 2;
-        max-width: 1280px;
+        width: 80%;
+        max-width: var(--container-max);
         margin: 0 auto;
         padding: 0 var(--container-padding);
     }
 
     &__content {
-        max-width: 200px;
-        padding: 6rem 0 4rem;
+        max-width: 480px;
+        padding: 8rem 0 4rem;
     }
 
     &__pre {
@@ -78,6 +79,12 @@
         font-weight: 500;
         color: var(--color-white);
         margin-bottom: 2.5rem;
+    }
+
+    &__word {
+        display: inline-block;
+        white-space: nowrap;
+        margin-right: 0.3em;
     }
 
     // Botões
@@ -120,6 +127,8 @@
     @media (max-width: 768px) {
         &__content {
             padding: 5rem 0 3rem;
+            margin: 0 auto;
+            text-align: center;
         }
 
         &__headline {
@@ -138,6 +147,7 @@
 
         &__actions {
             flex-direction: column;
+            align-items: center;
 
             .hero__btn {
                 width: 100%;

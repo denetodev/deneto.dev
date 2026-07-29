@@ -1,0 +1,52 @@
+.legal {
+    background-color: var(--color-offwhite);
+    color: var(--color-text-dark);
+    min-height: 100vh;
+
+    &__content {
+        padding-top: calc(var(--nav-height) + 3rem);
+        padding-bottom: 4rem;
+        max-width: 720px;
+    }
+
+    &__back {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: var(--color-muted);
+        margin-bottom: 2rem;
+        transition: color var(--ease);
+
+        &:hover {
+            color: var(--color-orange);
+        }
+    }
+
+    &__title {
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+    }
+
+    &__updated {
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: var(--color-muted);
+        margin-bottom: 3rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        color: #555;
+        margin-bottom: 1rem;
+    }
+}

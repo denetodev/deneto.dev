@@ -9,13 +9,19 @@ import { NgFor } from '@angular/common';
   styleUrl: './hero.scss',
 })
 export class Hero implements OnInit {
-  headlineLetters: { char: string; delay: number }[] = [];
+  headlineWords: { char: string; delay: number }[][] = [];
 
   ngOnInit() {
-    const headline = 'Banco de dia. Agentes de IA à noite.';
-    this.headlineLetters = headline.split('').map((char, i) => ({
-      char: char === ' ' ? '\u00A0' : char,
-      delay: 400 + i * 55,
-    }));
+    const headline = 'Automação de marketing em escala. Agentes de IA pra quem trabalha sozinho.';
+    let charIndex = 0;
+
+    this.headlineWords = headline.split(' ').map((word) => {
+      const letters = word.split('').map((char) => ({
+        char,
+        delay: 400 + charIndex++ * 55,
+      }));
+      charIndex++;
+      return letters;
+    })
   }
 }

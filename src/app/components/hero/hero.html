@@ -9,8 +9,10 @@
       <p class="hero__pre">Sou o Neto. Brasília, DF.</p>
 
       <h1 class="hero__headline">
-        <span *ngFor="let letter of headlineLetters" class="hero-letter" [style.animation-delay.ms]="letter.delay">{{
-          letter.char }}</span>
+        <span class="hero__word" *ngFor="let word of headlineWords">
+          <span *ngFor="let letter of word" class="hero-letter" [style.animation-delay.ms]="letter.delay">{{ letter.char
+            }}</span>
+        </span>
       </h1>
 
       <p class="hero__sub">
