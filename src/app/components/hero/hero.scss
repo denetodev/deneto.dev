@@ -149,17 +149,23 @@
     }
 
     &__inner {
-      padding: 0 1rem;
+      padding: 0;
     }
 
     &__content {
-      padding: 5rem 0 3rem;
+      padding: 8rem 0 3rem;
       margin: 0 auto;
       text-align: center;
     }
 
     &__headline {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__sub {
+      font-size: 0.9rem;
+      line-height: 1.5;
     }
 
     &__overlay {
