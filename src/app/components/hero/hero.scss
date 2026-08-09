@@ -1,158 +1,181 @@
 .hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  // Foto de fundo
+  &__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-position: right bottom;
+    }
+
+    .hero__bg-desktop {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .hero__bg-mobile {
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to right,
+        rgba(10, 10, 10, 0.92) 0%,
+        rgba(10, 10, 10, 0.7) 45%,
+        rgba(10, 10, 10, 0.2) 70%,
+        transparent 100%
+      ),
+      linear-gradient(to top, rgba(10, 10, 10, 0.8) 0%, transparent 40%);
+  }
+
+  // Conteúdo
+  &__inner {
     position: relative;
-    min-height: 100vh;
+    z-index: 2;
+    width: 80%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+  }
+
+  &__content {
+    max-width: 480px;
+    padding: 8rem 0 4rem;
+  }
+
+  &__pre {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--color-orange);
+    margin-bottom: 1.5rem;
+  }
+
+  &__headline {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+  }
+
+  &__sub {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 1rem;
+  }
+
+  &__accent {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 2.5rem;
+  }
+
+  &__word {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 0.3em;
+  }
+
+  // Botões
+  &__actions {
     display: flex;
-    align-items: center;
-    overflow: hidden;
+    gap: 1rem;
+  }
 
-    // Foto de fundo
+  &__btn {
+    font-family: var(--font);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all var(--ease);
+
+    &--primary {
+      background-color: var(--color-orange);
+      color: var(--color-white);
+
+      &:hover {
+        background-color: #e55800;
+      }
+    }
+
+    &--ghost {
+      background: transparent;
+      border: 1px solid var(--color-orange);
+      color: var(--color-orange);
+
+      &:hover {
+        background-color: rgba(255, 98, 0, 0.1);
+        color: var(--color-white);
+      }
+    }
+  }
+
+  // === MOBILE ===
+  @media (max-width: 768px) {
     &__bg {
-        position: absolute;
-        inset: 0;
-        z-index: 0;
+      .hero__bg-desktop {
+        display: none;
+      }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: right bottom;
-        }
+      .hero__bg-mobile {
+        display: block;
+      }
     }
 
-    &__overlay {
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(to right,
-                rgba(10, 10, 10, 0.92) 0%,
-                rgba(10, 10, 10, 0.7) 45%,
-                rgba(10, 10, 10, 0.2) 70%,
-                transparent 100%),
-            linear-gradient(to top,
-                rgba(10, 10, 10, 0.8) 0%,
-                transparent 40%);
-    }
-
-
-    // Conteúdo
     &__inner {
-        position: relative;
-        z-index: 2;
-        width: 80%;
-        max-width: var(--container-max);
-        margin: 0 auto;
-        padding: 0 var(--container-padding);
+      padding: 0 1rem;
     }
 
     &__content {
-        max-width: 480px;
-        padding: 8rem 0 4rem;
-    }
-
-    &__pre {
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        color: var(--color-orange);
-        margin-bottom: 1.5rem;
+      padding: 5rem 0 3rem;
+      margin: 0 auto;
+      text-align: center;
     }
 
     &__headline {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 800;
-        line-height: 1.1;
-        letter-spacing: -0.04em;
-        color: var(--color-white);
-        margin-bottom: 2rem;
+      font-size: 2rem;
     }
 
-    &__sub {
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.75;
-        color: rgba(255, 255, 255, 0.65);
-        margin-bottom: 1rem;
+    &__overlay {
+      background:
+        linear-gradient(to right, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.6) 100%),
+        linear-gradient(to top, rgba(10, 10, 10, 0.85) 0%, transparent 50%);
     }
 
-    &__accent {
-        font-size: 1rem;
-        font-weight: 500;
-        color: var(--color-white);
-        margin-bottom: 2.5rem;
-    }
-
-    &__word {
-        display: inline-block;
-        white-space: nowrap;
-        margin-right: 0.3em;
-    }
-
-    // Botões
     &__actions {
-        display: flex;
-        gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+
+      .hero__btn {
+        width: 100%;
+        text-align: center;
+      }
     }
-
-    &__btn {
-        font-family: var(--font);
-        font-size: 0.85rem;
-        font-weight: 600;
-        padding: 0.85rem 1.75rem;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all var(--ease);
-
-        &--primary {
-            background-color: var(--color-orange);
-            color: var(--color-white);
-
-            &:hover {
-                background-color: #e55800;
-            }
-        }
-
-        &--ghost {
-            background: transparent;
-            border: 1px solid var(--color-orange);
-            color: var(--color-orange);
-
-            &:hover {
-                background-color: rgba(255, 98, 0, 0.1);
-                color: var(--color-white);
-            }
-        }
-    }
-
-    // === MOBILE ===
-    @media (max-width: 768px) {
-        &__content {
-            padding: 5rem 0 3rem;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        &__headline {
-            font-size: 2rem;
-        }
-
-        &__overlay {
-            background:
-                linear-gradient(to right,
-                    rgba(10, 10, 10, 0.9) 0%,
-                    rgba(10, 10, 10, 0.6) 100%),
-                linear-gradient(to top,
-                    rgba(10, 10, 10, 0.85) 0%,
-                    transparent 50%);
-        }
-
-        &__actions {
-            flex-direction: column;
-            align-items: center;
-
-            .hero__btn {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    }
+  }
 }
